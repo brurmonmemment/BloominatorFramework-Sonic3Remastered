@@ -1,0 +1,21 @@
+Sonic 3 & Knuckles Remaster and "Bloominator Framework" Development Planning Document
+
+Bloominator Framework Planning
+Engine Details
+- Language: Python
+- Rendering: SDL3 via PySDL3 wrapper
+- Physics: Retro Engine-like
+- Resolution: 424x240 base, max 5x pixel-perfect upscaling in windowed, widescreen and ultrawide support (4:3 maybe?)
+-- Potential Aspect Ratios: 16:9 (mainly), 17-21:9, 4:3
+- Input methods: Keyboard + Gamepad
+
+Sonic 3 & Knuckles Remaster
+1. Planned Features
+- Widescreen/Ultrawide/4:3 Gameplay (of course)
+-- Additional tweaks for widescreen+ (fire breath boss moved over, extended data select with offset)
+- Remastered OST
+-- Candidates: Bouncy Glow's Music Room's
+- 60 FPS+ smooth gameplay experience
+-- Smooth interpolation maybe (?)
+-- Rectified smoothed movements of things like AIZ badniks, swings and Blue Spheres
+- BIG MAYBE, a Classic mode (remaster in 4:3) and an Original mode (integrated BlastEm with Sonic 3K rom provided by the user)
