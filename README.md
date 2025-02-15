@@ -12,6 +12,12 @@ a custom game engine im building for retro 16-bit games. (still a heavy wip, so 
 - **aspect ratios:** mainly 16:9, with options for 17–21:9 and 4:3
 - **input:** keyboard & gamepad
 
+**ZE REQUIREMENTS**
+1. python
+2. a computer
+3. pysdl3 package
+4. patience
+
 # sonic 3 & knuckles in bloominator framework
 
 im working on an open-source, easy-to-mod version of sonic 3 — no unmodifiable hardcoded parts or messy renderhooking required!
