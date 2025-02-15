@@ -1,4 +1,4 @@
-Sonic 3 & Knuckles Remaster and "Bloominator Framework" Development Planning Document
+this shit is not a cia document just know theres plans
 
 Bloominator Framework Planning
 Engine Details
