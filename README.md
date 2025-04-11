@@ -13,10 +13,6 @@ a custom game engine im building for retro 16-bit games. (still a heavy wip, so 
 custom ratio support (e.g. 16:9, 4:3, 17-21:9 n more)
 - **input:** keyboard & gamepad
 
--- window rendering system
-- **file name:** RenderWindow.py
-- **path: Engine/Scripts/Window/**
-
 **ZE REQUIREMENTS**
 1. python
 2. a computer
