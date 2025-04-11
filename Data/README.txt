@@ -1,0 +1,2 @@
+! These files are NOT from the Retro Engine remaster of Sonic 3 & Knuckles. Though they look similar, these files here have different structures and data, so putting in RSDK files will not work.
+However, this may change in the future if I decide to add Retro Engine support. For now though just try to use the built-in tools for generating files.
