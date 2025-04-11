@@ -2,7 +2,7 @@ I NEED BACKUP OVER HERE 🗣️🗣️🗣️
 
 # bloominator framework
 
-a custom game engine im building for retro 16-bit games. (still a heavy wip, so dont expect... anything!)
+a custom game engine im building for retro 16-bit games. (still getting started, so dont expect... anything!)
 
 --- **engine details**
 -- basic info
