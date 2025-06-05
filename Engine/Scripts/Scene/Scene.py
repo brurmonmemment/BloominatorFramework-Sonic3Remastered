@@ -1,14 +1,12 @@
-from collections import defaultdict
-
 class Scene:
-    def __init__(self, Category, Name, BackgroundColor, TimerEnabled=False, ExecFunctions=None):
+    def __init__(self, Category, Name, BackgroundColor, TimerEnabled=False, InitFuncs=None):
         self.Category = Category
         self.Name = Name
         self.BackgroundColor = BackgroundColor
         self.TimerEnabled = TimerEnabled
         self.Timer = {"Minutes": 0, "Seconds": 0, "Frames": 0}
-        self.Layers = defaultdict(list)
-        self.ExecFunctions = ExecFunctions if ExecFunctions else []
+        self.Layers = []
+        self.InitFuncs = InitFuncs if InitFuncs else []
 
     def AddLayer(self, Layer):
         if Layer not in self.Layers:
@@ -35,8 +33,8 @@ class Scene:
                 self.Timer["Seconds"] = 0
                 self.Timer["Minutes"] += 1
 
-    def ExecuteFunctions(self):
-        for Function in self.ExecFunctions:
+    def InitFuncs(self):
+        for Function in self.InitFuncs:
             Function(self)
 
 """ 
@@ -47,7 +45,7 @@ class Scene:
 ---     Name="ExampleScene",
 ---     BackgroundColor=(255, 255, 255),
 ---     TimerEnabled=True,
----     ExecFunctions=[lambda scene: print("Example scene started!")]
+---     InitFuncs=[lambda scene: print("Example scene started!")]
 --- )
 ---
 --- now you can register and use it with SceneManager! 

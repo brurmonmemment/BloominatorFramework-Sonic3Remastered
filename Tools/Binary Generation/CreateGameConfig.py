@@ -1,7 +1,6 @@
 class GameConfigData:
-    ProjectName      = input("What's the name of your game? ").encode()
-    ProjectVersion   = input("And the current version? ").encode()
-    ProjectSceneData = input("What's the name of your scene configuration file (you can make one with the CreateSceneConfig script)? ").encode()
+    ProjectName      = input("What's the name of your game? ")
+    ProjectVersion   = input("And the current version? ")
 
     # class Categories:
         # def __init__(self):
@@ -29,9 +28,9 @@ def Write():
     with open("GameConfig.bin", "wb") as GameConfigBinary:
         Lines = [
             b"GameConfig\x00\x00Game Info\x00\x00",
-            f"{GameConfigData.ProjectName}\x00v{GameConfigData.ProjectVersion}\x00\x00".encode(),
+            f'"{GameConfigData.ProjectName}"\x00v{GameConfigData.ProjectVersion}\x00\x00'.encode(),
             b"Scene Data\x00\x00",
-            f"File: {GameConfigData.ProjectSceneData}\x00\x00".encode(),
+            f"File: SceneConfig.bin\x00\x00".encode(),
         ]
 
         # SceneData = GameConfigData.Categories()

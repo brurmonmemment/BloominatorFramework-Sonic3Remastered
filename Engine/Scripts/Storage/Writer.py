@@ -1,3 +1,4 @@
+from Engine.Scripts.Settings.Game.SceneConfig import SceneConfig
 from Engine.Scripts.Storage.Reader import Ini, Config
 from Engine.Scripts.Settings.Game.GameConfig import GameConfig
 from Engine.Scripts.Settings.Video.VideoSettings import VideoSettings
@@ -6,7 +7,7 @@ class Variables:
     # the from import statements are placed in the functions so no circular import bullshit
     @staticmethod
     def UpdateVideoSettings():
-        from Engine.Scripts.Global.Paths import Paths
+        from Engine.Scripts.Global.Constants import Paths
         IniTool = Ini()
         IniTool.LoadIni(Paths.BloominatorPath + "Settings.ini")
         RetrievedSettings           = IniTool.GetVideoSettings()
@@ -21,18 +22,18 @@ class Variables:
 
     @staticmethod
     def UpdateGameConfigSettings():
-        from Engine.Scripts.Global.Paths import Paths
+        from Engine.Scripts.Global.Constants import Paths
         ConfigTool = Config()
         ConfigTool.LoadConfig(Paths.Project + "Game/GameConfig.bin")
-        RetrievedData           = ConfigTool.GetGameConfigData()
-        GameConfig.Name         = RetrievedData["Name"]
-        GameConfig.Version      = RetrievedData["Version"]
+        RetrievedData      = ConfigTool.GetGameConfigData()
+        GameConfig.Name    = RetrievedData["Name"]
+        GameConfig.Version = RetrievedData["Version"]
+        GameConfig.Icon    = RetrievedData["Icon"]
 
     @staticmethod
-    def UpdateStageConfigSettings():
-        from Engine.Scripts.Global.Paths import Paths
+    def UpdateSceneConfigSettings():
+        from Engine.Scripts.Global.Constants import Paths
         ConfigTool = Config()
-        ConfigTool.LoadConfig(Paths.Project + "Game/StageConfig.bin")
-        RetrievedData           = ConfigTool.GetGameConfigData()
-        GameConfig.Name         = RetrievedData["Name"]
-        GameConfig.Version      = RetrievedData["Version"]
+        ConfigTool.LoadConfig(Paths.Project + "Game/SceneConfig.bin")
+        RetrievedData          = ConfigTool.GetSceneConfigData()
+        SceneConfig.Categories = None

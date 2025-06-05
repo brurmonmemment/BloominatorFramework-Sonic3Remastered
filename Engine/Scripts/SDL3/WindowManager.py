@@ -1,81 +1,105 @@
+ShowDFText = True
+
 from Engine.Scripts.Settings.Video.VideoSettings import VideoSettings
 from Engine.Scripts.Settings.Game.GameConfig import GameConfig
-from ctypes import (c_char_p, c_int, c_ubyte, POINTER)
-from Engine.Scripts.Global.Paths import Paths
+from ctypes import (
+    c_char_p, c_int, c_bool,
+    c_uint, c_ulong
+)
+from Engine.Scripts.Global.Logging import Logging
+from Engine.Scripts.Global.Constants import Paths
+import os as OsLib
 from sdl3 import (
+    SDL_SetWindowTitle, SDL_HideWindow,
     IMG_Load, SDL_SetWindowIcon, SDL_SetWindowBordered,
-    SDL_SetWindowFullscreen, SDL_CreateWindow, SDL_FALSE, SDL_Window,
-    SDL_CreateRenderer, SDL_HideCursor, SDL_WINDOW_FULLSCREEN,
-    SDL_RestoreWindow, SDL_GetError, SDL_RenderClear, SDL_RenderPresent,
+    SDL_CreateRenderer, SDL_HideCursor, SDL_RestoreWindow,
+    SDL_SetWindowFullscreen, SDL_CreateWindow, SDL_INIT_VIDEO,
+    SDL_GetError, SDL_RenderClear, SDL_RenderPresent, SDL_Init,
+    SDL_LOGICAL_PRESENTATION_INTEGER_SCALE, SDL_BLENDMODE_BLEND,
     SDL_SetRenderLogicalPresentation, SDL_SetRenderDrawBlendMode,
-    SDL_LOGICAL_PRESENTATION_INTEGER_SCALE, SDL_BLENDMODE_BLEND, SDL_Renderer,
-    SDL_SetRenderDrawColor, SDL_Init, SDL_INIT_VIDEO
 )
 
-CurrentWindow    = None
-CurrentRenderer  = None
+Window   = None
+Renderer = None
 
 def Init():
-    global CurrentWindow
-    global CurrentRenderer
-    CurrentWindow = CreateWindow()
-    if CurrentWindow:
-        CurrentRenderer = CreateRenderer(CurrentWindow)
+    CreateWindow()
+    CreateRenderer()
 
-def CreateWindow() -> POINTER(SDL_Window):
-    SDL_Init(SDL_INIT_VIDEO)
-
-    Window = SDL_CreateWindow(
-        c_char_p(bytes(GameConfig.Name, "utf-8")),
-        c_int(VideoSettings.WinWidth), c_int(VideoSettings.WinHeight),
-        0
-    )
-
-    if not Window:
-        print(f"Failed to create Window! {SDL_GetError()}")
-        return None
-
-    print("Created Window!")
-    ApplyVSettings(Window)
-    return Window
-
-def ApplyVSettings(Window):
+def ApplyVSettings():
     if not VideoSettings.Fullscreen:
         SDL_RestoreWindow(Window)
+
         if not VideoSettings.ExFullscreen:
-            SDL_SetWindowFullscreen(Window, SDL_WINDOW_FULLSCREEN)
+            SDL_SetWindowFullscreen(Window, c_bool(True))
+
         SDL_HideCursor()
 
     if not VideoSettings.Bordered == True:
         SDL_RestoreWindow(Window)
-        SDL_SetWindowBordered(Window, SDL_FALSE)
+        SDL_SetWindowBordered(Window, c_bool(False))
 
-def CreateRenderer(Window) -> POINTER(SDL_Renderer):
+    Logging.PrintConsole("Window Manager", "Info", "Applied video settings to the newly created window")
+    Logging.PrintConsole("Window Manager", "Info",f"Video settings:")
+    Logging.PrintConsole("Window Manager", "Info", f" - Width: {VideoSettings.WinWidth}, Height: {VideoSettings.WinHeight}, Viewport Width: {VideoSettings.ViewportWidth} ({    int(s) if (s := VideoSettings.WinWidth / VideoSettings.ViewportWidth).is_integer() else round(s, 2)}x Window Scale)")
+    Logging.PrintConsole("Window Manager", "Info", f" - Bordered: {VideoSettings.Bordered}, {"(Exclusive)" if VideoSettings.ExFullscreen else ""} Fullscreen: {VideoSettings.Fullscreen}")
+    Logging.PrintConsole("Window Manager", "Info", f" - Refresh Rate: {VideoSettings.RefreshRate}")
+
+def CreateWindow():
+    global Window
+    Logging.PrintConsole("Window Manager", "Task", f"Creating a window...")
+
+    SDL_Init(c_uint(SDL_INIT_VIDEO))
+
+    Window = SDL_CreateWindow(
+        c_char_p(bytes(GameConfig.Name + (" (Data Folder)" if OsLib.path.isdir(Paths.Project) and ShowDFText else ""), "utf-8")),
+        c_int(VideoSettings.WinWidth), c_int(VideoSettings.WinHeight),
+        c_ulong(0)
+    )
+
+    WindowIconPath = bytes(Paths.BloominatorPath + GameConfig.Icon, "utf-8")
+    SDL_SetWindowIcon(Window, IMG_Load(c_char_p(WindowIconPath)))
+
+    # hide till done
+    SDL_HideWindow(Window)
+
     if not Window:
-        print("Window is not created!")
-        return None
+        Logging.PrintConsole("Window Manager", "Error", f"Failed to create window! {SDL_GetError()}")
+        exit(0)
+
+    Logging.PrintConsole("Window Manager", "Success", "Successfully created a new window!")
+    Logging.PrintConsole("Window Manager", "Info", "Window configuration: ")
+    Logging.PrintConsole("Window Manager", "Info", f" - Title: {GameConfig.Name} ")
+    Logging.PrintConsole("Window Manager", "Info", " - Window icon path: " + str(WindowIconPath)[2:-1]) # not today, b''
+    ApplyVSettings()
+
+def UpdateWindowTitle(Title):
+    SDL_SetWindowTitle(Window, c_char_p(bytes(Title + (" (Data Folder)" if OsLib.path.isdir(Paths.Project) and ShowDFText else ""), "utf-8")))
+
+def UpdateWindowIcon(IconPath):
+    WindowIconPath = bytes(Paths.BloominatorPath + str(IconPath), "utf-8")
+    SDL_SetWindowIcon(Window, IMG_Load(c_char_p(WindowIconPath)))
+
+def CreateRenderer():
+    global Renderer
+    Logging.PrintConsole("Window Manager", "Task", f"Creating a renderer...")
+
+    if not Window:
+        Logging.PrintConsole("Window Manager", "Error", "No existing window found!")
+        exit(0)
 
     Renderer = SDL_CreateRenderer(Window, c_char_p(b"gpu"))
 
     if not Renderer:
-        print(f"Failed to create Renderer! {SDL_GetError()}")
-        return None
+        Logging.PrintConsole("Window Manager", "Error", f"Failed to create renderer! {SDL_GetError()}")
+        exit(0)
 
-    print("Created Renderer!")
-
-    WindowIconPath = bytes(Paths.Project, "utf-8") + b"Sprites/ProjectIcon.gif"
-    SDL_SetWindowIcon(Window, IMG_Load(c_char_p(WindowIconPath)))
+    Logging.PrintConsole("Window Manager", "Success", "Created renderer!")
 
     SDL_SetRenderLogicalPresentation(Renderer,
-                                     w=c_int(424), h=c_int(240),
-                                     mode=SDL_LOGICAL_PRESENTATION_INTEGER_SCALE)
-    SDL_SetRenderDrawBlendMode(Renderer, SDL_BLENDMODE_BLEND)
+                                     w=c_int(VideoSettings.ViewportWidth), h=c_int(VideoSettings.WinHeight // (VideoSettings.WinWidth // VideoSettings.ViewportWidth)),
+                                     mode=c_int(SDL_LOGICAL_PRESENTATION_INTEGER_SCALE))
+    SDL_SetRenderDrawBlendMode(Renderer, c_uint(SDL_BLENDMODE_BLEND))
 
-    # visual rendering test
-    SDL_SetRenderDrawColor(Renderer,
-                           c_ubyte(16), c_ubyte(16), c_ubyte(16),
-                           c_ubyte(255))
     SDL_RenderClear(Renderer)
     SDL_RenderPresent(Renderer)
-
-    return Renderer

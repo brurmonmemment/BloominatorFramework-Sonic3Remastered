@@ -1,4 +1,5 @@
 import configparser
+from Engine.Scripts.Global.Constants import Binaries
 
 class Ini:
     def __init__(self):
@@ -45,7 +46,7 @@ class Ini:
             if self.ConfigParser.has_section(f"Input{Player}"):
                 InputData = self.ConfigParser[f"Input{Player}"]
                 InputMap  = {
-                    "InputType":    InputData.get("InputType"),
+                    "Type":         InputData.get("Type"),
                     "ButtonUp":     InputData.get("ButtonUp"),
                     "ButtonDown":   InputData.get("ButtonDown"),
                     "ButtonLeft":   InputData.get("ButtonLeft"),
@@ -73,20 +74,22 @@ class Config:
             self.Config = ConfigFile.read()
 
     def GetGameConfigData(self):
-        if "GameConfig.bin" in self.Path:
+        if Binaries.GameConfig in self.Path:
             ConfigData = self.Config.split(b"\x00")
 
             GameCfgMap = {
-                "Name":         ConfigData[4].decode("utf-8")[6:],
-                "Version":      int(ConfigData[5].decode("utf-8")[1:])
+                "Name":    ConfigData[4].decode("utf-8")[1:-1],
+                "Version": int(ConfigData[5].decode("utf-8")[1:]),
+                "Icon":    ConfigData[7][11:-1].decode("utf_8")
             }
 
             return GameCfgMap
         else:
-            print("Can't get game config data if there isn't a game config file !!!!!")
+            print("Can't get game config data if there isn't a game config file!!!!!")
+            return None
 
     def GetSceneConfigData(self):
-        if "SceneConfig.bin" in self.Path:
+        if Binaries.SceneConfig in self.Path:
             ConfigData = self.Config.split(b"\x00")
 
             def GetCategoriesAndScenes():
@@ -94,16 +97,20 @@ class Config:
                 Categories = {}
 
                 for Line in ConfigData[3:]:
-                    if Line.startswith(b"-- "):
+                    if Line.startswith(b"\x14\x14 "):
                         Category             = Line[10:]
                         Categories[Category] = []
-                    if Line.startswith(b"- ") and Category is not None:
+                    if Line.startswith(b"\x14 ") and Category is not None:
                         Categories[Category].append(Line[2:])
 
                 return Categories
 
             SceneConfigMap = { GetCategoriesAndScenes() }
-
             return SceneConfigMap
         else:
-            print("Can't get scene config data if there isn't a scene config file !!!!!")
+            print("Can't get scene config data if there isn't a scene config file!!!!!")
+            return None
+
+class Scene:
+    def __init__(self):
+        self.BackgroundColor = None
