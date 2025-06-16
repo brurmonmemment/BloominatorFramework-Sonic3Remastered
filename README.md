@@ -13,6 +13,12 @@ custom ratio support (e.g. 16:9, 4:3, 17-21:9 n more)
 - **system:** scene-based
 - **scene system:** binaries that have information as to how big its going to be, what kind of sprites will it use, the whole 9 yards
 
+-- **TODO**
+- Finish structuring the scene
+- Update the scene system to work with the new scene
+- Have a fully working scene with code execution
+- TBC
+
 **the REQUIREMENTS**
 1. python
 2. a computer
