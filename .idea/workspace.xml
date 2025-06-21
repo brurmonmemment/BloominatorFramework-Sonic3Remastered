@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="99983d59-18fe-4626-9d46-f0dd1aa66f17" name="Changes" comment="push all my files to github (remove when complete with the engine/remaster)" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="BloominatorFrameworkGitHubRepo/HEAD" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "brurmonmemment"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/brurmonmemment/BloominatorFramework-Sonic3Remastered.git",
+    "accountId": "97418cb1-dc45-4f5b-ab20-2667b01a1438"
+  }
+}]]></component>
+  <component name="LLMProjectSettings">
+    <option name="turned_on" value="false" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2sdkcWocfslkG54OByt7h9vOqu2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.AddToNamespace.executor": "Run",
+    "Python.BloominatorFramework.executor": "Run",
+    "Python.CreateGameConfig.executor": "Run",
+    "Python.CreateSceneConfig.executor": "Run",
+    "Python.CreateWindow.executor": "Run",
+    "Python.DefaultSplash.executor": "Run",
+    "Python.Experimental_CreateSceneCfgGui.executor": "Run",
+    "Python.GlobalValues.executor": "Run",
+    "Python.InitWindow.executor": "Run",
+    "Python.Reader.executor": "Run",
+    "Python.RenderWindow (1).executor": "Run",
+    "Python.RenderWindow.executor": "Run",
+    "Python.Scene.executor": "Run",
+    "Python.Sprite.executor": "Run",
+    "Python.SpriteSheet.executor": "Run",
+    "Python.Start.executor": "Run",
+    "Python.UserCore.executor": "Run",
+    "Python.VideoSettings.executor": "Run",
+    "Python.WindowEvents.executor": "Run",
+    "Python.WindowManager.executor": "Run",
+    "Python.idkifthiswillwork.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/brurmonemt/PycharmProjects/BloominatorFramework",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "vcs.Git"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Engine/Scripts/Settings/Game" />
+      <recent name="$PROJECT_DIR$/Tools/Binary Generation" />
+      <recent name="$PROJECT_DIR$/Engine/Scripts/Settings" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Engine/Bootstrapper" />
+      <recent name="$PROJECT_DIR$/Engine" />
+      <recent name="$PROJECT_DIR$/Engine/Fallback" />
+      <recent name="$PROJECT_DIR$/Data/Game" />
+      <recent name="$PROJECT_DIR$/Engine/Scripts/Settings/Game" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.Start">
+    <configuration name="Start" type="PythonConfigurationType" factoryName="Python">
+      <module name="BloominatorFramework" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Engine/Bootstrapper/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="VideoSettings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BloominatorFramework" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Engine/Scripts/Settings/Video" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Engine/Scripts/Settings/Video/VideoSettings.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Start" />
+      <item itemvalue="Python.VideoSettings" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.VideoSettings" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-348a24fa61fa-5312c7369657-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.23774.444" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99983d59-18fe-4626-9d46-f0dd1aa66f17" name="Changes" comment="" />
+      <created>1738792918390</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1738792918390</updated>
+    </task>
+    <task id="LOCAL-00001" summary="push all my files to github (remove when complete with the engine/remaster)">
+      <option name="closed" value="true" />
+      <created>1750465105438</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750465105438</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="push all my files to github (remove when complete with the engine/remaster)" />
+    <option name="LAST_COMMIT_MESSAGE" value="push all my files to github (remove when complete with the engine/remaster)" />
+  </component>
+</project>
