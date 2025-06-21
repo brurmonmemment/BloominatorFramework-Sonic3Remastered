@@ -1,3 +1,7 @@
+just to be clear, **this project isn't dead till i say so**
+
+its just that i barely remember that i have a github page i need to update
+
 # bloominator framework
 
 a custom game engine im building for retro 16-bit games. (still getting started, so dont expect... anything!)
