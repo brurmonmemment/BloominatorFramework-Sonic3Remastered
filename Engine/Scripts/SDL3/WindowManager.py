@@ -2,10 +2,6 @@ ShowDFText = True
 
 from Engine.Scripts.Settings.Video.VideoSettings import VideoSettings
 from Engine.Scripts.Settings.Game.GameConfig import GameConfig
-from ctypes import (
-    c_char_p, c_int, c_bool,
-    c_uint, c_ulong
-)
 from Engine.Scripts.Global.Logging import Logging
 from Engine.Scripts.Global.Constants import Paths
 import os as OsLib
@@ -31,13 +27,13 @@ def ApplyVSettings():
         SDL_RestoreWindow(Window)
 
         if not VideoSettings.ExFullscreen:
-            SDL_SetWindowFullscreen(Window, c_bool(True))
+            SDL_SetWindowFullscreen(Window, True)
 
         SDL_HideCursor()
 
     if not VideoSettings.Bordered == True:
         SDL_RestoreWindow(Window)
-        SDL_SetWindowBordered(Window, c_bool(False))
+        SDL_SetWindowBordered(Window, False)
 
     Logging.PrintConsole("Window Manager", "Info", "Applied video settings to the newly created window")
     Logging.PrintConsole("Window Manager", "Info",f"Video settings:")
@@ -49,16 +45,16 @@ def CreateWindow():
     global Window
     Logging.PrintConsole("Window Manager", "Task", f"Creating a window...")
 
-    SDL_Init(c_uint(SDL_INIT_VIDEO))
+    SDL_Init(SDL_INIT_VIDEO)
 
     Window = SDL_CreateWindow(
-        c_char_p(bytes(GameConfig.Name + (" (Data Folder)" if OsLib.path.isdir(Paths.Project) and ShowDFText else ""), "utf-8")),
-        c_int(VideoSettings.WinWidth), c_int(VideoSettings.WinHeight),
-        c_ulong(0)
+        bytes(GameConfig.Name + (" (Data Folder)" if OsLib.path.isdir(Paths.Project) and ShowDFText else ""), "utf-8"),
+        VideoSettings.WinWidth, VideoSettings.WinHeight,
+        0
     )
 
     WindowIconPath = bytes(Paths.BloominatorPath + GameConfig.Icon, "utf-8")
-    SDL_SetWindowIcon(Window, IMG_Load(c_char_p(WindowIconPath)))
+    SDL_SetWindowIcon(Window, IMG_Load(WindowIconPath))
 
     # hide till done
     SDL_HideWindow(Window)
@@ -74,11 +70,11 @@ def CreateWindow():
     ApplyVSettings()
 
 def UpdateWindowTitle(Title):
-    SDL_SetWindowTitle(Window, c_char_p(bytes(Title + (" (Data Folder)" if OsLib.path.isdir(Paths.Project) and ShowDFText else ""), "utf-8")))
+    SDL_SetWindowTitle(Window, bytes(Title + (" (Data Folder)" if OsLib.path.isdir(Paths.Project) and ShowDFText else ""), "utf-8"))
 
 def UpdateWindowIcon(IconPath):
     WindowIconPath = bytes(Paths.BloominatorPath + str(IconPath), "utf-8")
-    SDL_SetWindowIcon(Window, IMG_Load(c_char_p(WindowIconPath)))
+    SDL_SetWindowIcon(Window, IMG_Load(WindowIconPath))
 
 def CreateRenderer():
     global Renderer
@@ -88,7 +84,7 @@ def CreateRenderer():
         Logging.PrintConsole("Window Manager", "Error", "No existing window found!")
         exit(0)
 
-    Renderer = SDL_CreateRenderer(Window, c_char_p(b"gpu"))
+    Renderer = SDL_CreateRenderer(Window, b"gpu")
 
     if not Renderer:
         Logging.PrintConsole("Window Manager", "Error", f"Failed to create renderer! {SDL_GetError()}")
@@ -97,9 +93,9 @@ def CreateRenderer():
     Logging.PrintConsole("Window Manager", "Success", "Created renderer!")
 
     SDL_SetRenderLogicalPresentation(Renderer,
-                                     w=c_int(VideoSettings.ViewportWidth), h=c_int(VideoSettings.WinHeight // (VideoSettings.WinWidth // VideoSettings.ViewportWidth)),
-                                     mode=c_int(SDL_LOGICAL_PRESENTATION_INTEGER_SCALE))
-    SDL_SetRenderDrawBlendMode(Renderer, c_uint(SDL_BLENDMODE_BLEND))
+                                     w=VideoSettings.ViewportWidth, h=VideoSettings.WinHeight // (VideoSettings.WinWidth // VideoSettings.ViewportWidth),
+                                     mode=SDL_LOGICAL_PRESENTATION_INTEGER_SCALE)
+    SDL_SetRenderDrawBlendMode(Renderer, SDL_BLENDMODE_BLEND)
 
     SDL_RenderClear(Renderer)
     SDL_RenderPresent(Renderer)

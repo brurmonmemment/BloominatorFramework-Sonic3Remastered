@@ -1,6 +1,5 @@
 from Engine.Scripts.Global.Logging import Logging
 from Engine.Scripts.SDL3 import WindowManager
-from ctypes import c_bool
 from sdl3 import (
     SDL_Event, SDL_PollEvent, SDL_HideCursor,
     SDL_RestoreWindow, SDL_SetWindowFullscreen,
@@ -25,7 +24,7 @@ def ProcessEvent(Event):
     global Running
     if Event.type == SDL_EVENT_WINDOW_MAXIMIZED:
         SDL_RestoreWindow(WindowManager.Window)
-        SDL_SetWindowFullscreen(WindowManager.Window, c_bool(False))
+        SDL_SetWindowFullscreen(WindowManager.Window, False)
         if not SDL_HideCursor():
             SDL_HideCursor()
         Logging.PrintConsole("Event Processor", "Info", "Maximized window")

@@ -1,10 +1,9 @@
-from ctypes import c_ubyte
 from Engine.Scripts.SDL3 import WindowManager
 from sdl3 import SDL_SetRenderDrawColor, SDL_RenderClear, SDL_RenderPresent
 
 def ApplyBackgroundColor(Color):
     SDL_SetRenderDrawColor(WindowManager.Renderer,
-                           c_ubyte(Color[0]), c_ubyte(Color[1]), c_ubyte(Color[2]), c_ubyte(255))
+                           Color[0], Color[1], Color[2], 255)
     SDL_RenderClear(WindowManager.Renderer)
     SDL_RenderPresent(WindowManager.Renderer)
 

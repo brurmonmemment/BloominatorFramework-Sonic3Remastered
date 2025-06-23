@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99983d59-18fe-4626-9d46-f0dd1aa66f17" name="Changes" comment="push all my files to github (remove when complete with the engine/remaster)" />
+    <list default="true" id="99983d59-18fe-4626-9d46-f0dd1aa66f17" name="Changes" comment="Added my music restorations + some SFX">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Scripts/SDL3/EventProcessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Scripts/SDL3/EventProcessor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Scripts/SDL3/WindowManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Scripts/SDL3/WindowManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Scripts/Scene/SceneManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Scripts/Scene/SceneManager.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,18 +33,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "brurmonmemment"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;brurmonmemment&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/brurmonmemment/BloominatorFramework-Sonic3Remastered.git",
-    "accountId": "97418cb1-dc45-4f5b-ab20-2667b01a1438"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:brurmonmemment/BloominatorFramework-Sonic3Remastered.git&quot;,
+    &quot;accountId&quot;: &quot;97418cb1-dc45-4f5b-ab20-2667b01a1438&quot;
   }
-}]]></component>
+}</component>
   <component name="LLMProjectSettings">
     <option name="turned_on" value="false" />
   </component>
@@ -54,39 +59,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.AddToNamespace.executor": "Run",
-    "Python.BloominatorFramework.executor": "Run",
-    "Python.CreateGameConfig.executor": "Run",
-    "Python.CreateSceneConfig.executor": "Run",
-    "Python.CreateWindow.executor": "Run",
-    "Python.DefaultSplash.executor": "Run",
-    "Python.Experimental_CreateSceneCfgGui.executor": "Run",
-    "Python.GlobalValues.executor": "Run",
-    "Python.InitWindow.executor": "Run",
-    "Python.Reader.executor": "Run",
-    "Python.RenderWindow (1).executor": "Run",
-    "Python.RenderWindow.executor": "Run",
-    "Python.Scene.executor": "Run",
-    "Python.Sprite.executor": "Run",
-    "Python.SpriteSheet.executor": "Run",
-    "Python.Start.executor": "Run",
-    "Python.UserCore.executor": "Run",
-    "Python.VideoSettings.executor": "Run",
-    "Python.WindowEvents.executor": "Run",
-    "Python.WindowManager.executor": "Run",
-    "Python.idkifthiswillwork.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/brurmonemt/PycharmProjects/BloominatorFramework",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.AddToNamespace.executor&quot;: &quot;Run&quot;,
+    &quot;Python.BloominatorFramework.executor&quot;: &quot;Run&quot;,
+    &quot;Python.CreateGameConfig.executor&quot;: &quot;Run&quot;,
+    &quot;Python.CreateSceneConfig.executor&quot;: &quot;Run&quot;,
+    &quot;Python.CreateWindow.executor&quot;: &quot;Run&quot;,
+    &quot;Python.DefaultSplash.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Experimental_CreateSceneCfgGui.executor&quot;: &quot;Run&quot;,
+    &quot;Python.GlobalValues.executor&quot;: &quot;Run&quot;,
+    &quot;Python.InitWindow.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Reader.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RenderWindow (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.RenderWindow.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Scene.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Sprite.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SpriteSheet.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Start.executor&quot;: &quot;Run&quot;,
+    &quot;Python.UserCore.executor&quot;: &quot;Run&quot;,
+    &quot;Python.VideoSettings.executor&quot;: &quot;Run&quot;,
+    &quot;Python.WindowEvents.executor&quot;: &quot;Run&quot;,
+    &quot;Python.WindowManager.executor&quot;: &quot;Run&quot;,
+    &quot;Python.idkifthiswillwork.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/brurmonemt/PycharmProjects/BloominatorFramework&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Engine/Scripts/Settings/Game" />
@@ -181,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750465105438</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="i pushed to a noneixstent repo aksdfhajkshdfkbaksefbsbefk">
+      <option name="closed" value="true" />
+      <created>1750465987047</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750465987047</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -209,6 +223,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="push all my files to github (remove when complete with the engine/remaster)" />
-    <option name="LAST_COMMIT_MESSAGE" value="push all my files to github (remove when complete with the engine/remaster)" />
+    <MESSAGE value="i pushed to a noneixstent repo aksdfhajkshdfkbaksefbsbefk" />
+    <MESSAGE value="Added my music restorations + some SFX" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added my music restorations + some SFX" />
   </component>
 </project>
