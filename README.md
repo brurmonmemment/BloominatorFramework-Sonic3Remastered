@@ -36,8 +36,8 @@ im working on an open-source, easy-to-mod version of sonic 3 — no unmodifiable
 -- **planned features**
 - **multiple gameplay modes:** full support for widescreen, ultrawide & 4:3
   - accommodations for widescreen (like moving the fire breath boss and adjusting the data select screen & other stuff)
-- **remastered ost:** "remastered" yeah okay actually its just going to be the regular one but with the original instruments
-, one might call it a restoration
+- **ost:** high-quality direct vgm rips and restorations (still vgm rips but with new hi-hats and source DAC samples, selected by default)
+-- big thanks to sengin31 on YouTube for the sample pack I used + the hi hats
 - **smooth 60+ fps gameplay:**  
   - possibly with interpolation for extra smoothness  
   - interpolated, smooth moving objects like aiz's monkey dude, swings

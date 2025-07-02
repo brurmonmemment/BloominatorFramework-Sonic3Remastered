@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99983d59-18fe-4626-9d46-f0dd1aa66f17" name="Changes" comment="Added my music restorations + some SFX">
+    <list default="true" id="99983d59-18fe-4626-9d46-f0dd1aa66f17" name="Changes" comment="Added AIZ1 restoration">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Music/peaks/3_Title.wav.reapeaks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Music/peaks/watermarked.wav.reapeaks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Music/peaks/watermarked_for_reaper.wav.reapeaks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Music/AngelIsland1.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Music/AngelIsland1.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qodana.yaml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +79,7 @@
     &quot;Python.Scene.executor&quot;: &quot;Run&quot;,
     &quot;Python.Sprite.executor&quot;: &quot;Run&quot;,
     &quot;Python.SpriteSheet.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Start.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Start.executor&quot;: &quot;Debug&quot;,
     &quot;Python.UserCore.executor&quot;: &quot;Run&quot;,
     &quot;Python.VideoSettings.executor&quot;: &quot;Run&quot;,
     &quot;Python.WindowEvents.executor&quot;: &quot;Run&quot;,
@@ -126,7 +127,7 @@
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -193,7 +194,7 @@
       <workItem from="1751284150553" duration="648000" />
       <workItem from="1751313806166" duration="787000" />
       <workItem from="1751392073147" duration="313000" />
-      <workItem from="1751392503893" duration="1299000" />
+      <workItem from="1751392503893" duration="2795000" />
     </task>
     <task id="LOCAL-00001" summary="push all my files to github (remove when complete with the engine/remaster)">
       <option name="closed" value="true" />
@@ -211,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750465987047</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added AIZ1 restoration">
+      <option name="closed" value="true" />
+      <created>1751399646022</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1751399646023</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +253,7 @@
     <MESSAGE value="push all my files to github (remove when complete with the engine/remaster)" />
     <MESSAGE value="i pushed to a noneixstent repo aksdfhajkshdfkbaksefbsbefk" />
     <MESSAGE value="Added my music restorations + some SFX" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added my music restorations + some SFX" />
+    <MESSAGE value="Added AIZ1 restoration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added AIZ1 restoration" />
   </component>
 </project>
