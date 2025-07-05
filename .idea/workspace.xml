@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99983d59-18fe-4626-9d46-f0dd1aa66f17" name="Changes" comment="Added AIZ1 restoration">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/BloominatorFramework-Sonic3Remastered.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Music/AngelIsland1.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Music/AngelIsland1.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qodana.yaml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,6 +191,8 @@
       <workItem from="1751313806166" duration="787000" />
       <workItem from="1751392073147" duration="313000" />
       <workItem from="1751392503893" duration="2795000" />
+      <workItem from="1751658721179" duration="2614000" />
+      <workItem from="1751670668232" duration="1275000" />
     </task>
     <task id="LOCAL-00001" summary="push all my files to github (remove when complete with the engine/remaster)">
       <option name="closed" value="true" />
