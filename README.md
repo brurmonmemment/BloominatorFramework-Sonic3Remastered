@@ -1,6 +1,4 @@
-just to be clear, **this project isn't dead till i say so**
-
-its just that i barely remember that i have a github page i need to update
+development has been paused for now. i'll only come back to it once i feel like it. (i might still make music contributions but thats about it for now)
 
 # bloominator framework
 
