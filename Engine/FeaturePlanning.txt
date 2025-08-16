@@ -13,8 +13,8 @@ Sonic 3 & Knuckles Remaster
 1. Planned Features
 - Widescreen/Ultrawide/4:3 Gameplay (of course)
 -- Additional tweaks for widescreen+ (fire breath boss moved over, extended data select with offset)
-- Remastered OST
--- Candidates: Bouncy Glow's Music Room's
+- "Restored" OST
+-- High-quality VGM rips of the original soundtrack, now with source samples designed to fall right in between a remaster and just the regular tracks.
 - 60 FPS+ smooth gameplay experience
 -- Smooth interpolation maybe (?)
 -- Rectified smoothed movements of things like AIZ badniks, swings and Blue Spheres
