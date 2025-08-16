@@ -1,5 +1,3 @@
-development has been paused for now. i'll only come back to it once i feel like it. (i might still make music contributions but thats about it for now)
-
 # bloominator framework
 
 a custom game engine im building for retro 16-bit games. (still getting started, so dont expect... anything!)
