@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99983d59-18fe-4626-9d46-f0dd1aa66f17" name="Changes" comment="deletin all of them because theyre sloppily made i just did dynamic splits which arent precise at all n peak matched LOLLL">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="99983d59-18fe-4626-9d46-f0dd1aa66f17" name="Changes" comment="Oh yeah did I mention that blasting sample rates to studio-quality 192 kHz becomes extremely space consuming?" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +37,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/brurmonmemment/BloominatorFramework-Sonic3Remastered.git&quot;,
-    &quot;accountId&quot;: &quot;fdbcca4f-8500-493b-89bd-a348fedd4767&quot;
+    &quot;accountId&quot;: &quot;57462af8-d0f4-4eea-9022-9607aeacf7b7&quot;
   }
 }</component>
   <component name="LLMProjectSettings">
@@ -56,46 +54,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.AddToNamespace.executor&quot;: &quot;Run&quot;,
-    &quot;Python.BloominatorFramework.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CreateGameConfig.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CreateSceneConfig.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CreateWindow.executor&quot;: &quot;Run&quot;,
-    &quot;Python.DefaultSplash.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Experimental_CreateSceneCfgGui.executor&quot;: &quot;Run&quot;,
-    &quot;Python.GlobalValues.executor&quot;: &quot;Run&quot;,
-    &quot;Python.InitWindow.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Reader.executor&quot;: &quot;Run&quot;,
-    &quot;Python.RenderWindow (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.RenderWindow.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Scene.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Sprite.executor&quot;: &quot;Run&quot;,
-    &quot;Python.SpriteSheet.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Start.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.UserCore.executor&quot;: &quot;Run&quot;,
-    &quot;Python.VideoSettings.executor&quot;: &quot;Run&quot;,
-    &quot;Python.WindowEvents.executor&quot;: &quot;Run&quot;,
-    &quot;Python.WindowManager.executor&quot;: &quot;Run&quot;,
-    &quot;Python.idkifthiswillwork.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/brurmonemt/PycharmProjects/BloominatorFramework&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.AddToNamespace.executor": "Run",
+    "Python.BloominatorFramework.executor": "Run",
+    "Python.CreateGameConfig.executor": "Run",
+    "Python.CreateSceneConfig.executor": "Run",
+    "Python.CreateWindow.executor": "Run",
+    "Python.DefaultSplash.executor": "Run",
+    "Python.Experimental_CreateSceneCfgGui.executor": "Run",
+    "Python.GlobalValues.executor": "Run",
+    "Python.InitWindow.executor": "Run",
+    "Python.Reader.executor": "Run",
+    "Python.RenderWindow (1).executor": "Run",
+    "Python.RenderWindow.executor": "Run",
+    "Python.Scene.executor": "Run",
+    "Python.Sprite.executor": "Run",
+    "Python.SpriteSheet.executor": "Run",
+    "Python.Start.executor": "Run",
+    "Python.UserCore.executor": "Run",
+    "Python.VideoSettings.executor": "Run",
+    "Python.WindowEvents.executor": "Run",
+    "Python.WindowManager.executor": "Run",
+    "Python.idkifthiswillwork.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/brurmonemt/PycharmProjects/BloominatorFramework",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Engine/Scripts/Settings/Game" />
@@ -121,8 +120,9 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -171,8 +171,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-6be00b7b0f42-JavaScript-PY-252.23309.36" />
-        <option value="bundled-python-sdk-1eec2b582c1f-32658010c498-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.23309.36" />
+        <option value="bundled-python-sdk-ce6832f46686-7b97d883f26b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.25557.178" />
       </set>
     </attachedChunks>
   </component>
@@ -231,7 +230,31 @@
       <option name="project" value="LOCAL" />
       <updated>1751680118639</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ok so level matching is just SHITTY&#10;back you goooooooooooooooooooooooooo">
+      <option name="closed" value="true" />
+      <created>1758925999902</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1758925999902</updated>
+    </task>
+    <task id="LOCAL-00006" summary="only committing because for some reason i remade some tracks but they're not showing in github">
+      <option name="closed" value="true" />
+      <created>1759868348573</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1759868348573</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Oh yeah did I mention that blasting sample rates to studio-quality 192 kHz becomes extremely space consuming?">
+      <option name="closed" value="true" />
+      <created>1759870856841</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1759870856841</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +289,9 @@
     <MESSAGE value="Added my music restorations + some SFX" />
     <MESSAGE value="Added AIZ1 restoration" />
     <MESSAGE value="deletin all of them because theyre sloppily made i just did dynamic splits which arent precise at all n peak matched LOLLL" />
-    <option name="LAST_COMMIT_MESSAGE" value="deletin all of them because theyre sloppily made i just did dynamic splits which arent precise at all n peak matched LOLLL" />
+    <MESSAGE value="ok so level matching is just SHITTY&#10;back you goooooooooooooooooooooooooo" />
+    <MESSAGE value="only committing because for some reason i remade some tracks but they're not showing in github" />
+    <MESSAGE value="Oh yeah did I mention that blasting sample rates to studio-quality 192 kHz becomes extremely space consuming?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Oh yeah did I mention that blasting sample rates to studio-quality 192 kHz becomes extremely space consuming?" />
   </component>
 </project>
