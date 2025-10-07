@@ -1,12 +1,12 @@
 class Scene:
-    def __init__(self, Category, Name, BackgroundColor, TimerEnabled=False, InitFuncs=None):
+    def __init__(self, Category, Name, BackgroundColor, TimerEnabled=False, InitFunc=None):
         self.Category = Category
         self.Name = Name
         self.BackgroundColor = BackgroundColor
         self.TimerEnabled = TimerEnabled
         self.Timer = {"Minutes": 0, "Seconds": 0, "Frames": 0}
-        self.Layers = []
-        self.InitFuncs = InitFuncs if InitFuncs else []
+        self.Layers = {}
+        self.InitFunc = InitFunc if InitFunc else []
 
     def AddLayer(self, Layer):
         if Layer not in self.Layers:
@@ -33,8 +33,8 @@ class Scene:
                 self.Timer["Seconds"] = 0
                 self.Timer["Minutes"] += 1
 
-    def InitFuncs(self):
-        for Function in self.InitFuncs:
+    def ExecInitFunc(self):
+        for Function in self.InitFunc:
             Function(self)
 
 """ 

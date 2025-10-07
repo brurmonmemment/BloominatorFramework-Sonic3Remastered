@@ -12,6 +12,8 @@ ActiveScene = None
 
 def FetchScenes(Scene):
     global Categories
+    if Scene.Category not in Categories:
+        Categories[Scene.Category] = {}
     Categories[Scene.Category][Scene.Name] = Scene
 
 def SetActiveScene(Category, SceneName):

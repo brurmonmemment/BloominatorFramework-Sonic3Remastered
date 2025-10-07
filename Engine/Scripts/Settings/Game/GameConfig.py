@@ -2,4 +2,4 @@
 class GameConfig:
     Name      = "Bloominator Framework"
     Version   = 1
-    Icon  = "Engine/Fallback/WindowIcon.png"
+    Icon      = "Engine/Fallback/WindowIcon.png"

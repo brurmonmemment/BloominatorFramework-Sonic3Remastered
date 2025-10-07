@@ -1,3 +1,10 @@
+# To ensure imports work correctly
+import sys, os
+
+# Add project root to sys.path
+PROJECT_ROOT = os.path.dirname(os.path.join(os.path.dirname(__file__), "../../"))
+sys.path.append(PROJECT_ROOT)
+
 from sdl3 import SDL_ShowWindow
 from Engine.Scripts.SDL3 import WindowManager
 from Engine.Scripts.SDL3 import EventProcessor
