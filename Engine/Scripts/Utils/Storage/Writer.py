@@ -1,5 +1,5 @@
 from Engine.Scripts.Settings.Game.SceneConfig import SceneConfig
-from Engine.Scripts.Storage.Reader import Ini, Config
+from Engine.Scripts.Utils.Storage.Reader import Ini, Config
 from Engine.Scripts.Settings.Game.GameConfig import GameConfig
 from Engine.Scripts.Settings.Video.VideoSettings import VideoSettings
 

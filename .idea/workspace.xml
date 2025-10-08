@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99983d59-18fe-4626-9d46-f0dd1aa66f17" name="Changes" comment="Oh yeah did I mention that blasting sample rates to studio-quality 192 kHz becomes extremely space consuming?" />
+    <list default="true" id="99983d59-18fe-4626-9d46-f0dd1aa66f17" name="Changes" comment="i fixed it">
+      <change afterPath="$PROJECT_DIR$/Engine/BloomLibraries.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Bootstrapper/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Bootstrapper/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Scripts/Global/Logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Scripts/Global/Logging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Scripts/Storage/Reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Scripts/Utils/Storage/Reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Scripts/Storage/Writer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Scripts/Utils/Storage/Writer.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +57,9 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2sdkcWocfslkG54OByt7h9vOqu2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -103,11 +113,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\brurmonemt\PycharmProjects\BloominatorFramework-Sonic3Remastered\Engine\Scripts\Utils" />
       <recent name="$PROJECT_DIR$/Engine/Bootstrapper" />
       <recent name="$PROJECT_DIR$/Engine" />
       <recent name="$PROJECT_DIR$/Engine/Fallback" />
       <recent name="$PROJECT_DIR$/Data/Game" />
-      <recent name="$PROJECT_DIR$/Engine/Scripts/Settings/Game" />
     </key>
   </component>
   <component name="RunManager" selected="Python.Start">
@@ -254,7 +264,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759870856841</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Oh yeah did I mention that blasting sample rates to studio-quality 192 kHz becomes extremely space consuming?&#10;Now i have these tracks back with a common hi-hat volume">
+      <option name="closed" value="true" />
+      <created>1759871350132</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1759871350132</updated>
+    </task>
+    <task id="LOCAL-00009" summary="i fixed it">
+      <option name="closed" value="true" />
+      <created>1759872096401</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1759872096401</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,6 +318,8 @@
     <MESSAGE value="ok so level matching is just SHITTY&#10;back you goooooooooooooooooooooooooo" />
     <MESSAGE value="only committing because for some reason i remade some tracks but they're not showing in github" />
     <MESSAGE value="Oh yeah did I mention that blasting sample rates to studio-quality 192 kHz becomes extremely space consuming?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Oh yeah did I mention that blasting sample rates to studio-quality 192 kHz becomes extremely space consuming?" />
+    <MESSAGE value="Oh yeah did I mention that blasting sample rates to studio-quality 192 kHz becomes extremely space consuming?&#10;Now i have these tracks back with a common hi-hat volume" />
+    <MESSAGE value="i fixed it" />
+    <option name="LAST_COMMIT_MESSAGE" value="i fixed it" />
   </component>
 </project>

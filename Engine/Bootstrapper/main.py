@@ -9,7 +9,7 @@ from sdl3 import SDL_ShowWindow
 from Engine.Scripts.SDL3 import WindowManager
 from Engine.Scripts.SDL3 import EventProcessor
 from Engine.Scripts.Global.Logging import Logging
-from Engine.Scripts.Storage.Writer import Variables
+from Engine.Scripts.Utils.Storage.Writer import Variables
 from Engine.Scripts.Scene import SceneManager
 from Engine.Scripts.Global.Constants import Project as PCheck
 from Engine.Scripts.Settings.Game.GameConfig import GameConfig
