@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99983d59-18fe-4626-9d46-f0dd1aa66f17" name="Changes" comment="i fixed it">
-      <change afterPath="$PROJECT_DIR$/Engine/BloomLibraries.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/Bootstrapper/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Bootstrapper/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/Scripts/Global/Logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Scripts/Global/Logging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/Scripts/Storage/Reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Scripts/Utils/Storage/Reader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/Scripts/Storage/Writer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Scripts/Utils/Storage/Writer.py" afterDir="false" />
+    <list default="true" id="99983d59-18fe-4626-9d46-f0dd1aa66f17" name="Changes" comment="trying to rework the import system">
+      <change beforePath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/Engine/BloomLibraries.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +20,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Stub" />
         <option value="Python Script" />
       </list>
     </option>
@@ -33,7 +34,7 @@
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -75,8 +76,10 @@
     "Python.DefaultSplash.executor": "Run",
     "Python.Experimental_CreateSceneCfgGui.executor": "Run",
     "Python.GlobalValues.executor": "Run",
+    "Python.ImportHelper.executor": "Run",
     "Python.InitWindow.executor": "Run",
     "Python.Reader.executor": "Run",
+    "Python.RenderSubsystem.executor": "Run",
     "Python.RenderWindow (1).executor": "Run",
     "Python.RenderWindow.executor": "Run",
     "Python.Scene.executor": "Run",
@@ -92,19 +95,31 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/brurmonemt/PycharmProjects/BloominatorFramework",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/brurmonemt/PycharmProjects/BloominatorFramework-Sonic3Remastered",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "project.scopes",
+    "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="BloominatorFramework-Sonic3Remastered" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="BloominatorFramework-Sonic3Remastered" />
+      </console-settings>
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Engine/Scripts/Settings/Game" />
@@ -113,14 +128,14 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\brurmonemt\PycharmProjects\BloominatorFramework-Sonic3Remastered\Engine\Scripts\Utils" />
-      <recent name="$PROJECT_DIR$/Engine/Bootstrapper" />
-      <recent name="$PROJECT_DIR$/Engine" />
-      <recent name="$PROJECT_DIR$/Engine/Fallback" />
-      <recent name="$PROJECT_DIR$/Data/Game" />
+      <recent name="C:\Users\brurmonemt\PycharmProjects\HedgeEngine-Sonic3Remastered" />
+      <recent name="C:\Users\brurmonemt\PycharmProjects\BloominatorFramework-Sonic3Remastered\Engine\Source" />
+      <recent name="C:\Users\brurmonemt\PycharmProjects\BloominatorFramework-Sonic3Remastered\Engine\Source\Subsystems" />
+      <recent name="C:\Users\brurmonemt\PycharmProjects\BloominatorFramework-Sonic3Remastered\Engine\Source\Structs\Settings" />
+      <recent name="C:\Users\brurmonemt\PycharmProjects\BloominatorFramework-Sonic3Remastered\Engine\Source\Utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Start">
+  <component name="RunManager" selected="Python.main">
     <configuration name="Start" type="PythonConfigurationType" factoryName="Python">
       <module name="BloominatorFramework" />
       <option name="ENV_FILES" value="" />
@@ -136,7 +151,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Engine/Bootstrapper/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -145,8 +160,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="VideoSettings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="BloominatorFramework" />
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="HedgeEngine-Sonic3Remastered" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -154,12 +169,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Engine/Scripts/Settings/Video" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Engine/Scripts/Settings/Video/VideoSettings.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -168,15 +182,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Python.Start" />
-      <item itemvalue="Python.VideoSettings" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.VideoSettings" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -280,7 +285,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759872096401</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="trying to rework the import system">
+      <option name="closed" value="true" />
+      <created>1759882420099</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1759882420099</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,6 +333,19 @@
     <MESSAGE value="Oh yeah did I mention that blasting sample rates to studio-quality 192 kHz becomes extremely space consuming?" />
     <MESSAGE value="Oh yeah did I mention that blasting sample rates to studio-quality 192 kHz becomes extremely space consuming?&#10;Now i have these tracks back with a common hi-hat volume" />
     <MESSAGE value="i fixed it" />
-    <option name="LAST_COMMIT_MESSAGE" value="i fixed it" />
+    <MESSAGE value="trying to rework the import system" />
+    <MESSAGE value="stash" />
+    <option name="LAST_COMMIT_MESSAGE" value="stash" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

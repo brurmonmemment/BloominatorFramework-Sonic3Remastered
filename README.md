@@ -1,44 +1,55 @@
-# bloominator framework
+# General TODOs
+- Build on subsystem abstraction layer
+- Extra code for stuff like inputs and audio tests
+- (POTENTIALLY) Start working on the stage system again
 
-a custom game engine im building for retro 16-bit games. (still getting started, so dont expect... anything!)
+# Hedge Engine
+A robust 2D sprite-based engine, designed for ease of use and mod-ability.
 
---- **engine details**
--- basic info
-- **language:** python (sorry)
-- **rendering:** sdl3 (via pysdl3)
-- **physics:** retro engine-like
-- **resolution:** base of 424x240 with up to 5x pixel-perfect upscaling in windowed mode, plus 
-custom ratio support (e.g. 16:9, 4:3, 17-21:9 n more)
-- **input:** keyboard & gamepad
-- **system:** scene-based
-- **scene system:** binaries that have information as to how big its going to be, what kind of sprites will it use, the whole 9 yards
+## Engine Details
+### Basic Info
+- **Programming Language:** Python (sorry)
+- **Backend(s):** SDL3 (PySDL3), managed via abstraction layer & allows for new backends
+- **Resolution:** 424x240 base with custom scaling 
 
--- **TODO**
-- Finish structuring the scene
-- Update the scene system to work with the new scene
-- Have a fully working scene with code execution
-- TBC
+  Custom ratio support (e.g. 16:9, 16:10, 4:3, 17:9, etc.)
 
-**the REQUIREMENTS**
-1. python
-2. a computer
-3. pysdl3 package
-4. patience, like a LOT
+  Allows for custom W/H scaling (e.g. you can have a scale of 2W/3H)
+- **Supported Inputs:** Keyboards & Controllers
+- **Style:** Stage-based
 
-# sonic 3 & knuckles in bloominator framework
+  Stages are the separate screens that are usually shown in-order but can jump to other ones regardless of order
+- **Stage system:** A stage in this context is usually made up of:
+  - Title
+  - Stage logic
+  - Spritesheets
+  - Object definitions in binaries (background parallax features, other objects, etc.)
+- I plan to make stage editors so you don't have to painstakingly deal with CLIs.
+  - not in python lmao
 
-im working on an open-source, easy-to-mod version of sonic 3 — no unmodifiable hardcoded parts or renderhooking required (looking at YOU S3AIR)!
+### Prerequisites
+1. Python 3.10 (preferably later)
+2. Desktop OS (Windows/macOS/Linux)
+3. PySDL3
 
--- **planned features**
+# Project Echidna in Hedge Engine (TBD)
+An open source Sonic 3 & Knuckles remaster in Hedge Engine that will be developed alongside this engine.
+
+Proper development will not start until the engine is in a state where it can actually perform 
+### Le Planned Features
 - **multiple gameplay modes:** full support for widescreen, ultrawide & 4:3
   - accommodations for widescreen (like moving the fire breath boss and adjusting the data select screen & other stuff)
-- **ost:** high-quality direct vgm rips and restorations (still vgm rips but with new hi-hats and source DAC samples, selected by default)
--- big thanks to sengin31 on YouTube for the sample pack I used + the hi hats
-- **smooth 60+ fps gameplay:**  
-  - possibly with interpolation for extra smoothness  
-  - interpolated, smooth moving objects like aiz's monkey dude, swings
-- **features i definetly dont and wont know how to add but if anybody wants it then i might add it:**  
-  - a classic mode (game in 4:3)  
-  - an original mode (using integrated blastem with a user-supplied sonic 3k rom)
+- **OST:** Having the option between:
+  - Unchanged SMPS rips
+  - "Restorations" (Source instruments + PSG3 -> Hi hats)
+    - Big thanks to Sengin31 on YouTube for the sample pack I used + the hi hats
+    - SVG 360 (supervideogamer3607) for the MJ beatboxing vox (Credits)
+  - Full-on remasters (restoration + other enhancements) (PROBABLY WON'T EXIST DON'T GET YOUR HOPES UP)
+- **Consistent 60 FPS+ gameplay:**  
+  - (maybe with interpolation?)
+  - Smoother objects like Monkey Dude (frame-less movements)
+### Potential Features? (I don't know if I could add these)
+- A "Throwback mode" (remaster in 4:3 with additional tweaks)  
+- An original mode (embed of an emulator like BlastEm with a Sonic 3K ROM supplied by the user)
 
-i basically havent made any progress on either of these so if someone can help me out it would be greatly appreciated!!!!
+PLEASE HELP ME
