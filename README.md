@@ -35,7 +35,7 @@ A robust 2D sprite-based engine, designed for ease of use and mod-ability.
 # Project Echidna in Hedge Engine (TBD)
 An open source Sonic 3 & Knuckles remaster in Hedge Engine that will be developed alongside this engine.
 
-Proper development will not start until the engine is in a state where it can actually perform 
+Proper development will not start until the engine is in a state where it can actually perform basic to somewhat advanced functions.
 ### Le Planned Features
 - **multiple gameplay modes:** full support for widescreen, ultrawide & 4:3
   - accommodations for widescreen (like moving the fire breath boss and adjusting the data select screen & other stuff)
