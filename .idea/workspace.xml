@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99983d59-18fe-4626-9d46-f0dd1aa66f17" name="Changes" comment="trying to rework the import system">
-      <change beforePath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/Engine/BloomLibraries.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Engine/Source/Enums/Video/States.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Source/Core/HedgeEngine.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Core/HedgeEngine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Source/Enums/Settings/Video.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Enums/Video/Settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Source/Structs/Settings/Video.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Structs/Settings/Video.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Source/Subsystems/Common/EventManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Subsystems/Common/EventManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Source/Subsystems/Common/VideoInterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Subsystems/Common/VideoInterface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Source/Subsystems/SDL3/EventManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Subsystems/SDL3/EventManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Source/Subsystems/SDL3/VideoInterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Subsystems/SDL3/VideoInterface.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +38,7 @@
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -54,9 +58,10 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "f13822ff",
+  "associatedIndex": 5
+}]]></component>
   <component name="ProjectId" id="2sdkcWocfslkG54OByt7h9vOqu2" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -65,53 +70,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.AddToNamespace.executor": "Run",
-    "Python.BloominatorFramework.executor": "Run",
-    "Python.CreateGameConfig.executor": "Run",
-    "Python.CreateSceneConfig.executor": "Run",
-    "Python.CreateWindow.executor": "Run",
-    "Python.DefaultSplash.executor": "Run",
-    "Python.Experimental_CreateSceneCfgGui.executor": "Run",
-    "Python.GlobalValues.executor": "Run",
-    "Python.ImportHelper.executor": "Run",
-    "Python.InitWindow.executor": "Run",
-    "Python.Reader.executor": "Run",
-    "Python.RenderSubsystem.executor": "Run",
-    "Python.RenderWindow (1).executor": "Run",
-    "Python.RenderWindow.executor": "Run",
-    "Python.Scene.executor": "Run",
-    "Python.Sprite.executor": "Run",
-    "Python.SpriteSheet.executor": "Run",
-    "Python.Start.executor": "Run",
-    "Python.UserCore.executor": "Run",
-    "Python.VideoSettings.executor": "Run",
-    "Python.WindowEvents.executor": "Run",
-    "Python.WindowManager.executor": "Run",
-    "Python.idkifthiswillwork.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/brurmonemt/PycharmProjects/BloominatorFramework-Sonic3Remastered",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "project.scopes",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.AddToNamespace.executor&quot;: &quot;Run&quot;,
+    &quot;Python.BloominatorFramework.executor&quot;: &quot;Run&quot;,
+    &quot;Python.CreateGameConfig.executor&quot;: &quot;Run&quot;,
+    &quot;Python.CreateSceneConfig.executor&quot;: &quot;Run&quot;,
+    &quot;Python.CreateWindow.executor&quot;: &quot;Run&quot;,
+    &quot;Python.DefaultSplash.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Experimental_CreateSceneCfgGui.executor&quot;: &quot;Run&quot;,
+    &quot;Python.GlobalValues.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ImportHelper.executor&quot;: &quot;Run&quot;,
+    &quot;Python.InitWindow.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Reader.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RenderSubsystem.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RenderWindow (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.RenderWindow.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Scene.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Sprite.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SpriteSheet.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Start.executor&quot;: &quot;Run&quot;,
+    &quot;Python.UserCore.executor&quot;: &quot;Run&quot;,
+    &quot;Python.VideoSettings.executor&quot;: &quot;Run&quot;,
+    &quot;Python.WindowEvents.executor&quot;: &quot;Run&quot;,
+    &quot;Python.WindowManager.executor&quot;: &quot;Run&quot;,
+    &quot;Python.idkifthiswillwork.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/brurmonemt/PycharmProjects/HedgeEngine-Sonic3Remastered&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="BloominatorFramework-Sonic3Remastered" is-module-sdk="true">
@@ -128,11 +134,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\brurmonemt\PycharmProjects\HedgeEngine-Sonic3Remastered\Engine\Source\Enums\Video" />
+      <recent name="C:\Users\brurmonemt\PycharmProjects\HedgeEngine-Sonic3Remastered\Engine\Source\Enums" />
       <recent name="C:\Users\brurmonemt\PycharmProjects\HedgeEngine-Sonic3Remastered" />
       <recent name="C:\Users\brurmonemt\PycharmProjects\BloominatorFramework-Sonic3Remastered\Engine\Source" />
       <recent name="C:\Users\brurmonemt\PycharmProjects\BloominatorFramework-Sonic3Remastered\Engine\Source\Subsystems" />
-      <recent name="C:\Users\brurmonemt\PycharmProjects\BloominatorFramework-Sonic3Remastered\Engine\Source\Structs\Settings" />
-      <recent name="C:\Users\brurmonemt\PycharmProjects\BloominatorFramework-Sonic3Remastered\Engine\Source\Utilities" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
@@ -151,7 +157,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../HedgeEngine-Sonic3Remastered/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -169,6 +175,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -182,6 +189,10 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.Start" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

@@ -1,11 +1,11 @@
 from typing import Any
-
 from sdl3 import *
-
 from Engine.Source.Structs.Settings.Video import VideoSettings, VS_Lookup
+from Engine.Source.Enums.Video.States import WINDOW_STATE
 
 WindowInstance: Any   = None
 RendererInstance: Any = None
+WindowState: WINDOW_STATE = WINDOW_STATE.PREPARING
 
 # ======================== #
 # For simple initializing  #
@@ -89,6 +89,6 @@ def QuitSubsystem():
 # ======================== #
 def UpdateScreen():
     # TODO: add proper renderer update logic
-    SDL_SetRenderDrawColor(RendererInstance, 0, 0, 0, 255) # type: ignore[arg-type]
+    SDL_SetRenderDrawColor(RendererInstance, 0, 255, 0, 255) # type: ignore[arg-type]
     SDL_RenderClear(RendererInstance)
     SDL_RenderPresent(RendererInstance)

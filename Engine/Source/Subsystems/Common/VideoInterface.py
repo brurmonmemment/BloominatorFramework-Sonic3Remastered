@@ -4,6 +4,7 @@ from types import ModuleType as _M
 
 from sdl3 import SDL_Window
 
+from Engine.Source.Enums.Video.States import WINDOW_STATE
 from Engine.Source.Subsystems.SubsystemAbstractor import GetModulePathFromCurrentSubsystemType, GetCurrentSubsystem
 
 # ======================== #
@@ -11,6 +12,8 @@ from Engine.Source.Subsystems.SubsystemAbstractor import GetModulePathFromCurren
 # ======================== #
 WindowInstance   = None
 RendererInstance = None
+
+WindowState: WINDOW_STATE | None = None
 
 def Init(): return None
 def InitSDLSubsystems(): return None

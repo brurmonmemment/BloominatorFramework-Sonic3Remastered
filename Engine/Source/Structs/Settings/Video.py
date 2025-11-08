@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from Engine.Source.Enums.Settings.Video import FULLSCREEN
+from Engine.Source.Enums.Video.Settings import FULLSCREEN
 
 
 @dataclass
@@ -36,7 +36,7 @@ def VS_Lookup(Item):
         if base is None:
             return False
 
-        match _SCALE: # WARNING: match was only introduced in python 3.10. previous versions will throw a syntax err
+        match _SCALE: # figure ts out
             case int() | float():
                 __SCALE = max(_SCALE, 1)
             case (w, h):

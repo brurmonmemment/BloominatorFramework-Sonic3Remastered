@@ -9,8 +9,14 @@ from Engine.Source.Subsystems.SubsystemAbstractor import GetModulePathFromCurren
 # ======================== #
 Running = False
 # noinspection PyUnusedLocal
-def ProcessEvent(Event): return None
-def ProcessEvents(): return None
+def ProcessEvent(Event): pass
+def ProcessEvents(): pass
+FrequencyTarget = None
+CurrentTicks    = None
+PreviousTicks   = None
+def SetupCap(): pass
+def FrameTickOver(): pass
+def UpdateTicks(): pass
 
 # ======================== #
 # Actual content @ runtime # exist because static sucks
