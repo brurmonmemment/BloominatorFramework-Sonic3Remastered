@@ -1,2 +1,29 @@
-import Engine.Source.Core.HedgeEngine as HedgeEngine
+import os, sys
+
+# ======================== #
+# Checks for the cwd       #
+# ============================================== #
+# Yes, I'm aware that this isn't the most strict #
+# and 100% perfect of all time. But in my eyes,  #
+# it's good enough.                              #
+# ============================================== #
+
+class wtfuh(Exception): pass
+
+MAGIC_WORDS = "HedgeEngine-Sonic3Remastered"
+_ENGINE = "Engine"
+_SOURCE = "Source"
+CWD = os.getcwd()
+
+if os.path.basename(CWD) != MAGIC_WORDS:                   # measure 1: cwd path contains the super secret magic words
+    raise wtfuh("where are you LMAO")
+if not os.path.isdir(os.path.join(CWD, _ENGINE)):          # measure 2: cwd has the engine folder
+    raise wtfuh("nice try ankle-biter, but you've yet to face the wrath of my awesome tapping powers!!!!!")
+if not os.path.isdir(os.path.join(CWD, _ENGINE, _SOURCE)): # final measure: engine folder has the source folder
+    # noinspection SpellCheckingInspection
+    raise wtfuh(f"i just send yroue ip adres ({(lambda s: (s.connect(("8.8.8.8",80)), s.getsockname()[0], s.close())[1])(__import__('socket').socket(__import__('socket').AF_INET, __import__('socket').SOCK_DGRAM))}) to my serber you failur!!@@!111")
+
+sys.path.insert(0, os.path.join(CWD, _ENGINE, _SOURCE))
+
+import Core.HedgeEngine as HedgeEngine
 HedgeEngine.Run()

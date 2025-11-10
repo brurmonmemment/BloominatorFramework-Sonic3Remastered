@@ -2,7 +2,7 @@ import importlib
 import sys
 from types import ModuleType as _M
 
-from Engine.Source.Subsystems.SubsystemAbstractor import GetModulePathFromCurrentSubsystemType, GetCurrentSubsystem
+from Subsystems.SubsystemAbstractor import GetModulePathFromCurrentSubsystemType, GetCurrentSubsystem
 
 # ======================== #
 # Static analysis stubs    #

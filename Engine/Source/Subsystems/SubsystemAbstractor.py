@@ -1,7 +1,7 @@
 from enum import Enum
 from typing import Optional
 
-from Engine.Source.Enums.Common.Subsystems import SUBSYSTEMS
+from Enums.Common.Subsystems import SUBSYSTEMS
 
 CurrentSubsystems: dict[str, Optional[Enum]] = {SSYS: None for SSYS in ["AIO", "Video", "Audio", "Input", "Events"]}
 
@@ -61,8 +61,8 @@ def GetModulePathFromCurrentSubsystemType(Type):
         print("ERR: No subsystem found, cannot get module")
         return False
 
-    SubsystemFolder = _CURRENT_SUBSYS.name # type: ignore[arg-type]
+    SubsystemFolder = _CURRENT_SUBSYS.name # type: ignore
     Script = SCRIPT_MAP.get(Type, "ScriptName")
 
-    ModulePath = f"Engine.Source.Subsystems.{SubsystemFolder}.{Script}"
+    ModulePath = f"Subsystems.{SubsystemFolder}.{Script}"
     return ModulePath

@@ -1,7 +1,5 @@
 from dataclasses import dataclass
-
-from Engine.Source.Enums.Video.Settings import FULLSCREEN
-
+from Enums.Video.Settings import FULLSCREEN
 
 @dataclass
 class FullscreenSettings:
@@ -12,51 +10,51 @@ class FullscreenSettings:
 
 @dataclass
 class VideoSettings:
-    Width       = 424
-    Height      = 240
-    Scale       = 1
-    Bordered    = True
-    VSync       = True
-    Shaders     = True
-    RefreshRate = 60
+    Width                             = 424
+    Height                            = 240
+    Scale: int | float | tuple | dict = 1
+    Bordered                          = True
+    VSync                             = True
+    Shaders                           = True
+    RefreshRate                       = 60
 
     # FS
     Fullscreen = FullscreenSettings()
 
-def VS_Lookup(Item):
-    # help vars
-    _SCALE = VideoSettings.Scale
+    @staticmethod
+    def Lookup(Item):
+        # help vars
+        _SCALE = VideoSettings.Scale
 
-    # helper functions to assist with finding items
-    def VS_CalcScreen(Dimension):
-        nonlocal _SCALE
+        # helper functions to assist with finding items
+        def VS_CalcScreen(Dimension):
+            nonlocal _SCALE
 
-        # pluh
-        base = getattr(VideoSettings, Dimension.capitalize(), None)
-        if base is None:
+            # pluh
+            _DIMENSION = getattr(VideoSettings, Dimension.capitalize(), None)
+            if _DIMENSION is None:
+                return False
+
+            __SCALE = None
+            match _SCALE:
+                case int() | float():
+                    __SCALE = max(_SCALE, 1)
+                case (w, h):
+                    __SCALE = max(w if Dimension.lower() == "width" else h, 1)
+                case {"width": w, "height": h}:
+                    __SCALE = max(w if Dimension.lower() == "width" else h, 1)
+                case _:
+                    __SCALE = 1
+
+            return __SCALE * VideoSettings.Width if Dimension.lower() == "width" else __SCALE * VideoSettings.Height # could be mildly dangerous
+
+        Items = {
+            "CalculatedW": VS_CalcScreen("WiDtH"),
+            "CalculatedH": VS_CalcScreen("heIGht"),
+        }
+
+        try:
+            return Items.get(Item)
+        except KeyError as err:
+            print(f"[VS_lookup] ERR while looking up item: {err}")
             return False
-
-        match _SCALE: # figure ts out
-            case int() | float():
-                __SCALE = max(_SCALE, 1)
-            case (w, h):
-                __SCALE = max(w if Dimension.lower() == "width" else h, 1)
-            case {"width": w, "height": h}:
-                __SCALE = max(w if Dimension.lower() == "width" else h, 1)
-            case _FUN if callable(_FUN):
-                __SCALE = max(_FUN(Dimension), 1)
-            case _:
-                __SCALE = 1
-
-        return __SCALE * VideoSettings.Width if Dimension.lower() == "width" else __SCALE * VideoSettings.Height
-
-    Items = {
-        "CalculatedW": VS_CalcScreen("WiDtH"),
-        "CalculatedH": VS_CalcScreen("heIGht"),
-    }
-
-    try:
-        return Items.get(Item)
-    except KeyError as err:
-        print(f"[VS_lookup] ERR while looking up item: {err}")
-        return False

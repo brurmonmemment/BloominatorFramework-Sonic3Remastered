@@ -1,14 +1,13 @@
 from sdl3 import *
-from Engine.Source.Enums.Video.States import WINDOW_STATE
-from Engine.Source.Structs.Settings.Video import VideoSettings
-import Engine.Source.Subsystems.Common.VideoInterface as VideoInterface
+from Enums.Video.States import WINDOW_STATE
+from Structs.Settings.Video import VideoSettings
+import Subsystems.Common.VideoInterface as VideoInterface
 
 # ======================== #
 # Window events            #
 # ======================== #
 Running = False
 
-# noinspection PyTypeChecker
 def ProcessEvent(Event):
     global Running
 
@@ -45,7 +44,7 @@ PreviousTicks   = None
 def SetupCap():
     global FrequencyTarget, CurrentTicks, PreviousTicks
 
-    FrequencyTarget = SDL_GetPerformanceFrequency() / VideoSettings.RefreshRate  # type: ignore[arg-type]
+    FrequencyTarget = SDL_GetPerformanceFrequency() / VideoSettings.RefreshRate  # type: ignore
     CurrentTicks    = 0
     PreviousTicks   = 0
 
@@ -53,7 +52,7 @@ def FrameTickOver():
     global FrequencyTarget, CurrentTicks, PreviousTicks
 
     CurrentTicks = SDL_GetPerformanceCounter()
-    return CurrentTicks >= PreviousTicks + FrequencyTarget
+    return CurrentTicks >= PreviousTicks + FrequencyTarget # type: ignore
 
 def UpdateTicks():
     global CurrentTicks, PreviousTicks

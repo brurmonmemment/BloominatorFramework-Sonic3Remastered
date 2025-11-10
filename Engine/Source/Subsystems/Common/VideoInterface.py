@@ -4,15 +4,14 @@ from types import ModuleType as _M
 
 from sdl3 import SDL_Window
 
-from Engine.Source.Enums.Video.States import WINDOW_STATE
-from Engine.Source.Subsystems.SubsystemAbstractor import GetModulePathFromCurrentSubsystemType, GetCurrentSubsystem
+from Enums.Video.States import WINDOW_STATE
+from Subsystems.SubsystemAbstractor import GetModulePathFromCurrentSubsystemType, GetCurrentSubsystem
 
 # ======================== #
 # Static analysis stubs    #
 # ======================== #
 WindowInstance   = None
 RendererInstance = None
-
 WindowState: WINDOW_STATE | None = None
 
 def Init(): return None
@@ -20,8 +19,8 @@ def InitSDLSubsystems(): return None
 def CreateWindow(): return None
 # noinspection PyUnusedLocal
 def CreateRenderer(Window: SDL_Window): return None
-def QuitSubsystem(): return None
 def UpdateScreen(): return None
+def Quit(): return None
 
 # ======================== #
 # Actual content @ runtime # exist because static sucks

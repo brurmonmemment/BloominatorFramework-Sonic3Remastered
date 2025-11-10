@@ -1,9 +1,11 @@
-import Engine.Source.Subsystems.Common.EventManager as EventManager
-import Engine.Source.Subsystems.Common.VideoInterface as VideoInterface
-import Engine.Source.Subsystems.SubsystemAbstractor as SAL
-from Engine.Source.Enums.Common.Subsystems import SUBSYSTEMS
+import Subsystems.Common.EventManager as EventManager
+import Subsystems.Common.VideoInterface as VideoInterface
+import Subsystems.SubsystemAbstractor as SAL
+from Common.Files.Settings import UpdateVideoSettingsFromIni
+from Enums.Common.Subsystems import SUBSYSTEMS
 
 def Run():
+    UpdateVideoSettingsFromIni()
     SAL.SetAIOSubsystem(SUBSYSTEMS.AIO.SDL3)
     if VideoInterface.Init():
         EventManager.Running = True
@@ -12,6 +14,7 @@ def Run():
 
     while EventManager.Running:
         EventManager.ProcessEvents()
+
         if not EventManager.Running: # do it early so we dont have to wait another frame
             break
 
@@ -19,3 +22,5 @@ def Run():
             EventManager.UpdateTicks()
 
             VideoInterface.UpdateScreen()
+
+    VideoInterface.Quit()
