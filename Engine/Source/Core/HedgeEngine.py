@@ -1,7 +1,7 @@
 import Subsystems.Common.EventManager as EventManager
 import Subsystems.Common.VideoInterface as VideoInterface
 import Subsystems.SubsystemAbstractor as SAL
-from Common.Files.Settings import UpdateVideoSettingsFromIni
+from Common.Files.Settings import *
 from Enums.Common.Subsystems import SUBSYSTEMS
 
 def Run():
@@ -24,3 +24,4 @@ def Run():
             VideoInterface.UpdateScreen()
 
     VideoInterface.Quit()
+    FlushVideoSettingsToIni()

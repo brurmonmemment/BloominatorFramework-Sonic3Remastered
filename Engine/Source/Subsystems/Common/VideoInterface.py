@@ -22,9 +22,8 @@ def CreateRenderer(Window: SDL_Window): return None
 def UpdateScreen(): return None
 def Quit(): return None
 
-# ======================== #
-# Actual content @ runtime # exist because static sucks
-# ======================== #
+# Now at runtime, all calls will be passed to this... proxy
+# Cheap but hey it works
 class anus(_M):
     _MODULE = None
     _SUBSYS = None

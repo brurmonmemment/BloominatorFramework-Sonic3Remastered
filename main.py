@@ -1,18 +1,17 @@
 import os, sys
 
-# ======================== #
-# Checks for the cwd       #
-# ============================================== #
-# Yes, I'm aware that this isn't the most strict #
-# and 100% perfect of all time. But in my eyes,  #
-# it's good enough.                              #
-# ============================================== #
-
-class wtfuh(Exception): pass
-
 MAGIC_WORDS = "HedgeEngine-Sonic3Remastered"
 _ENGINE = "Engine"
 _SOURCE = "Source"
+
+class wtfuh(Exception):
+    print("CWD seems to be placed outside of the engine.")
+
+# ======================== #
+# Checks for the cwd       #
+# ======================== #
+# It's good enough lmao    #
+# ======================== #
 CWD = os.getcwd()
 
 if os.path.basename(CWD) != MAGIC_WORDS:                   # measure 1: cwd path contains the super secret magic words

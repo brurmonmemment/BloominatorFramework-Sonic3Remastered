@@ -18,9 +18,8 @@ def SetupCap(): pass
 def FrameTickOver(): pass
 def UpdateTicks(): pass
 
-# ======================== #
-# Actual content @ runtime # exist because static sucks
-# ======================== #
+# Now at runtime, all calls will be passed to this... proxy
+# Cheap but hey it works
 class anus(_M):
     _MODULE = None
     _SUBSYS = None

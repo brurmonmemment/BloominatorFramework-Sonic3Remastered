@@ -34,6 +34,7 @@ def SetAIOSubsystem(Subsystem: SUBSYSTEMS.AIO):
     try:
         for Key, Value in AIO_MAP[Subsystem].items():
             CurrentSubsystems[Key] = Value
+            print(f"Set {str(Value)} to {str(Key)}")
     except KeyError:
         print("WARNING: AIO subsys does not exist! Will fall back to SDL3")
         for Key, Value in AIO_MAP[_DEFAULT_SUBSYS].items():
@@ -48,6 +49,7 @@ def SetSubsystem(Type: str, Subsystem: Enum): # i love python
         return False
 
     CurrentSubsystems[Type] = Subsystem
+    print(f"Set {str(Type)} subsystem to {str(Subsystem)}")
     return True
 
 # ======================== #

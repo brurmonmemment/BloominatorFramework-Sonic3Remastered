@@ -50,21 +50,10 @@ def Duplicate(Source, NewName=None, Extension=" (Copy)"):
 # ======================== #
 _P = ConfigParser()
 _P.optionxform = str # silly ConfigParser
-_CUR_PATH = None
+_CUR_PATH:    None | str  = None
+_CUR_SECTION: None | dict = {}
 
-def _CHK_CFG_INI_DATA(Path, IGNORE_CLR_WARN = 1): # ignore = 0, clear = 1, warn = 2
-    global _CUR_PATH
-    if _CUR_PATH != Path:
-        if _P.sections():
-            if IGNORE_CLR_WARN == 1:
-                _P.clear()
-            elif IGNORE_CLR_WARN == 2:
-                print("WARNING: ConfigParser already has leftover data, reading multiple files at a time may cause bugs")
-            return True
-        _CUR_PATH = Path
-    return None
-
-def _PARSE_DATA(Value, AUTOPARSE_TUPLES=True):
+def _PARSE_INI_DATA(Value, AUTOPARSE_TUPLES=True):
     if not isinstance(Value, str):
         return Value
 
@@ -87,17 +76,16 @@ def _PARSE_DATA(Value, AUTOPARSE_TUPLES=True):
         pass
 
     # could be a tuple?
-    if Value.startswith("(") and Value.endswith(")"):
+    if Value.startswith("(") and Value.endswith(")"): # relatively messy but who cares :3
         _IN = Value[1:-1].strip()
         if not _IN:
             return tuple()
-
         _ITMS = [_ITM.strip() for _ITM in _IN.split(",")]
-        if AUTOPARSE_TUPLES: # I HATE THIS SO MUCH
+        if AUTOPARSE_TUPLES:
             _PI = []
             for _ITM in _ITMS:
                 try:
-                    _PI.append(_PARSE_DATA(_ITM))
+                    _PI.append(_PARSE_INI_DATA(_ITM))
                 except (TypeError, ValueError):
                     _PI.append(_ITM)
             return tuple(_PI)
@@ -108,36 +96,83 @@ def _PARSE_DATA(Value, AUTOPARSE_TUPLES=True):
     # well it wasn't any of those so :(
     return Value
 
-def ReadSection(Path, Section):
-    if not Exists(Path):
+def _WRITE_INI_SAFE(Section, Data):
+    """
+    With ConfigParser, normally the data in the INI file gets overwritten completely.
+    Comments are not preserved, so instead of using another library, I wrote a (admittedly)
+    janky alternative. Not super amazing, but hey, it gets the job done.
+    """
+    with open(_CUR_PATH, "r+") as Ini:
+        _LINES = Ini.readlines()
+        __CUR_SECTION = None
+        _RECONSTRUCT = []
+        for _LINE in _LINES:
+            _LINE_S = _LINE.strip()
+            if _LINE_S.startswith("[") and _LINE_S.endswith("]"):
+                __CUR_SECTION = _LINE_S[1:-1]
+
+            if "=" in _LINE: # probably... hopefully
+                _PRTS  = _LINE.split("=", 1)
+                _KEY   = _PRTS[0].strip()
+                # _VAL_O = _PRTS[1].strip() # im sure this could be useful in la future
+                try:
+                    if __CUR_SECTION == Section:
+                        _VAL = Data[_KEY]
+                        if _VAL is not None:
+                            _LINE = f"{_KEY}={_VAL}\n"
+                except KeyError:
+                    pass
+
+            _RECONSTRUCT.append(_LINE)
+
+        Ini.seek(0)
+        Ini.write("".join(_RECONSTRUCT))
+        Ini.truncate()
+
+def UpdateCurrentPath(Path, IgnoreClearWarn = 1): # ignore = 0, clear = 1, warn = 2
+    global _CUR_PATH
+    if _CUR_PATH != Path:
+        if _P.sections():
+            if IgnoreClearWarn == 1:
+                _P.clear()
+            elif IgnoreClearWarn == 2:
+                print("WARNING: ConfigParser already has leftover data, reading multiple files at a time may cause bugs")
+            return True
+        _CUR_PATH = Path
+    return None
+
+def ReadSection(Section):
+    if not Exists(_CUR_PATH):
         return None
-    _CHK_CFG_INI_DATA(Path)
-    _P.read(Path)
+    UpdateCurrentPath(_CUR_PATH)
+    _P.read(_CUR_PATH)
     if not _P.has_section(Section):
         return None
-    return dict(_P.items(Section))
+    return {_KEY: _PARSE_INI_DATA(_VALUE) for _KEY, _VALUE in _P.items(Section)}
 
-def WriteSection(Path, Section, Data):
-    _CHK_CFG_INI_DATA(Path)
+def WriteSection(Section, Data):
+    UpdateCurrentPath(_CUR_PATH)
     if not _P.has_section(Section):
         _P.add_section(Section)
     for _K, _VAL in Data.items():
         _P.set(Section, _K, str(_VAL)) # like i know it says it in the docs that it has to be a string, but why?
-    with open(Path, "w") as Ini:
-        _P.write(Ini)
+    _WRITE_INI_SAFE(Section, Data)
     return True
 
-def ReadKey(Path, Section, Key, Default=None):
-    _SECTION = ReadSection(Path, Section)
-    if not _SECTION:
-        return Default
-    return _SECTION.get(Key, Default)
+def ReadKey(Section, Key, Default=None):
+    if not Exists(_CUR_PATH):
+        return None
+    global _CUR_SECTION
+    if not _CUR_SECTION:
+        _CUR_SECTION = ReadSection(Section)
+        if not _CUR_SECTION:
+            return Default
+    return _PARSE_INI_DATA(_CUR_SECTION.get(Key, Default))
 
-def WriteKey(Path, Section, Key, Value):
-    _CHK_CFG_INI_DATA(Path)
+def WriteKey(Section, Key, Value):
+    UpdateCurrentPath(_CUR_PATH)
     if not _P.has_section(Section):
         _P.add_section(Section)
-    _P.set(Section, Key, _PARSE_DATA(Value))
-    with open(Path, "w") as Ini:
-        _P.write(Ini)
+    _P.set(Section, Key, str(Value))
+    _WRITE_INI_SAFE(Section, {Key: Value})
     return True

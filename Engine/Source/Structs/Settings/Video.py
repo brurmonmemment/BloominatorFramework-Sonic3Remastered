@@ -23,6 +23,8 @@ class VideoSettings:
 
     @staticmethod
     def Lookup(Item):
+        print(f"[VideoSettings] Looking up {str(Item)}...")
+
         # help vars
         _SCALE = VideoSettings.Scale
 
