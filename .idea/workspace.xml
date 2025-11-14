@@ -4,15 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99983d59-18fe-4626-9d46-f0dd1aa66f17" name="Changes" comment="basic video settings from the ini should work again, not fs though">
+    <list default="true" id="99983d59-18fe-4626-9d46-f0dd1aa66f17" name="Changes" comment="custom ini writer w/out ext. library">
+      <change afterPath="$PROJECT_DIR$/Engine/Source/Enums/Diagnostics/Logging.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Engine/Source/Utilities/Logging.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Docs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Docs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/FeaturePlanning.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/FeaturePlanning.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Engine/Source/Common/Files/Settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Common/Files/Settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Engine/Source/Core/HedgeEngine.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Core/HedgeEngine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Source/Enums/Common/Subsystems.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Enums/Common/Subsystems.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Source/Enums/Video/Settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Enums/Video/Settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Source/Enums/Video/States.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Enums/Video/States.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Engine/Source/Structs/Settings/Video.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Structs/Settings/Video.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Engine/Source/Subsystems/Common/EventManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Subsystems/Common/EventManager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Engine/Source/Subsystems/Common/VideoInterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Subsystems/Common/VideoInterface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Source/Subsystems/SDL3/EventManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Subsystems/SDL3/EventManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Source/Subsystems/SDL3/VideoInterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Subsystems/SDL3/VideoInterface.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Engine/Source/Subsystems/SubsystemAbstractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Subsystems/SubsystemAbstractor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engine/Source/Utilities/FS/File.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Utilities/FS/File.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engine/Source/Utilities/FS/File.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engine/Source/Utilities/Filesystem/File.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Settings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Settings.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -135,11 +144,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\brurmonemt\PycharmProjects\HedgeEngine-Sonic3Remastered\Engine\Source\Utilities" />
       <recent name="C:\Users\brurmonemt\PycharmProjects\HedgeEngine-Sonic3Remastered\Engine\Source\Structs" />
       <recent name="C:\Users\brurmonemt\PycharmProjects\HedgeEngine-Sonic3Remastered\Engine\Source\Enums" />
       <recent name="C:\Users\brurmonemt\PycharmProjects\HedgeEngine-Sonic3Remastered\Engine\Source\Enums\Video" />
       <recent name="C:\Users\brurmonemt\PycharmProjects\HedgeEngine-Sonic3Remastered" />
-      <recent name="C:\Users\brurmonemt\PycharmProjects\BloominatorFramework-Sonic3Remastered\Engine\Source" />
     </key>
   </component>
   <component name="RunManager" selected="Python.Start">
@@ -313,7 +322,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762626034355</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="custom ini writer w/out ext. library">
+      <option name="closed" value="true" />
+      <created>1762909120592</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1762909120592</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,6 +373,7 @@
     <MESSAGE value="trying to rework the import system" />
     <MESSAGE value="stash" />
     <MESSAGE value="FPS cap!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="FPS cap!!!" />
+    <MESSAGE value="custom ini writer w/out ext. library" />
+    <option name="LAST_COMMIT_MESSAGE" value="custom ini writer w/out ext. library" />
   </component>
 </project>

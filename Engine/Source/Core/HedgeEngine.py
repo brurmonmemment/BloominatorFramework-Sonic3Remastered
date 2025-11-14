@@ -1,27 +1,30 @@
-import Subsystems.Common.EventManager as EventManager
-import Subsystems.Common.VideoInterface as VideoInterface
-import Subsystems.SubsystemAbstractor as SAL
-from Common.Files.Settings import *
+# ======================== #
+# Imports                  #
+# ======================== #
 from Enums.Common.Subsystems import SUBSYSTEMS
+import Subsystems.SubsystemAbstractor as SAL
+SAL.SetAIOSubsystem(SUBSYSTEMS.AIO.SDL3)
+from Subsystems.Common.EventManager import EventManager, FPSCap
+from Subsystems.Common.VideoInterface import VideoInterface
+from Common.Files.Settings import *
 
 def Run():
     UpdateVideoSettingsFromIni()
-    SAL.SetAIOSubsystem(SUBSYSTEMS.AIO.SDL3)
-    if VideoInterface.Init():
-        EventManager.Running = True
+    EM = EventManager()
+    FPS = FPSCap()
+    VI = VideoInterface()
+    if VI:
+        EM.Running = True
+    while EM.IsRunning:
+        EM.PollEvents()
 
-    EventManager.SetupCap()
-
-    while EventManager.Running:
-        EventManager.ProcessEvents()
-
-        if not EventManager.Running: # do it early so we dont have to wait another frame
+        if not EM.IsRunning: # do it early so we dont have to wait another frame
             break
 
-        if EventManager.FrameTickOver():
-            EventManager.UpdateTicks()
+        if FPS.FrameTickOver():
+            FPS.UpdateTicks()
 
-            VideoInterface.UpdateScreen()
+            # VI.UpdateScreen()
 
-    VideoInterface.Quit()
+    VI.Quit()
     FlushVideoSettingsToIni()

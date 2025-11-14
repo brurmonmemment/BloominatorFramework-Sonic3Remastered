@@ -1,3 +1,6 @@
+# ======================== #
+# Imports                  #
+# ======================== #
 import os
 import shutil
 from configparser import ConfigParser
@@ -49,7 +52,7 @@ def Duplicate(Source, NewName=None, Extension=" (Copy)"):
 # INI management           #
 # ======================== #
 _P = ConfigParser()
-_P.optionxform = str # silly ConfigParser
+_P.optionxform = str
 _CUR_PATH:    None | str  = None
 _CUR_SECTION: None | dict = {}
 
@@ -76,7 +79,7 @@ def _PARSE_INI_DATA(Value, AUTOPARSE_TUPLES=True):
         pass
 
     # could be a tuple?
-    if Value.startswith("(") and Value.endswith(")"): # relatively messy but who cares :3
+    if Value.startswith("(") and Value.endswith(")"):
         _IN = Value[1:-1].strip()
         if not _IN:
             return tuple()
@@ -99,8 +102,8 @@ def _PARSE_INI_DATA(Value, AUTOPARSE_TUPLES=True):
 def _WRITE_INI_SAFE(Section, Data):
     """
     With ConfigParser, normally the data in the INI file gets overwritten completely.
-    Comments are not preserved, so instead of using another library, I wrote a (admittedly)
-    janky alternative. Not super amazing, but hey, it gets the job done.
+    Comments are not preserved, so instead of using another library, I wrote an
+    alternative. Not super amazing, but hey, it gets the job done.
     """
     with open(_CUR_PATH, "r+") as Ini:
         _LINES = Ini.readlines()
@@ -112,9 +115,8 @@ def _WRITE_INI_SAFE(Section, Data):
                 __CUR_SECTION = _LINE_S[1:-1]
 
             if "=" in _LINE: # probably... hopefully
-                _PRTS  = _LINE.split("=", 1)
-                _KEY   = _PRTS[0].strip()
-                # _VAL_O = _PRTS[1].strip() # im sure this could be useful in la future
+                _PRTS = _LINE.split("=", 1)
+                _KEY  = _PRTS[0].strip()
                 try:
                     if __CUR_SECTION == Section:
                         _VAL = Data[_KEY]

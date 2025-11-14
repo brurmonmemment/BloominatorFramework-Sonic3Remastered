@@ -1,3 +1,6 @@
+# ======================== #
+# Imports                  #
+# ======================== #
 from enum import Enum, auto
 
 class FULLSCREEN(Enum):

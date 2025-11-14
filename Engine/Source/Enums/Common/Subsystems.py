@@ -1,3 +1,6 @@
+# ======================== #
+# Imports                  #
+# ======================== #
 from enum import Enum, auto
 
 # ======================== #
@@ -15,10 +18,12 @@ class SUBSYS_AIO(Enum): # An AIO subsystem is a separate category that can do vi
     SDL3 = auto()
 
 class SUBSYS_VIDEO(Enum):
-    SDL3   = auto()
-    OPENGL = auto()
-    METAL  = auto()
-    VULKAN = auto()
+    DIRECTX9  = auto()
+    DIRECTX11 = auto()
+    SDL3      = auto()
+    OPENGL    = auto()
+    METAL     = auto()
+    VULKAN    = auto()
 
 class SUBSYS_AUDIO(Enum):
     SDL3      = auto()

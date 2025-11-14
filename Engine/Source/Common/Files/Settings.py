@@ -1,6 +1,9 @@
+# ======================== #
+# Imports                  #
+# ======================== #
 import os
 from Structs.Settings.Video import VideoSettings
-from Utilities.FS.File import ReadSection, WriteSection, WriteKey, UpdateCurrentPath
+from Utilities.Filesystem.File import ReadSection, WriteSection, WriteKey, UpdateCurrentPath
 
 SettingsFile = "Settings.ini"
 FullPath = os.path.join(os.getcwd(), SettingsFile)

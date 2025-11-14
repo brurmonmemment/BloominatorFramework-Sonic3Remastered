@@ -1,3 +1,6 @@
+# ======================== #
+# Imports                  #
+# ======================== #
 from dataclasses import dataclass
 from Enums.Video.Settings import FULLSCREEN
 

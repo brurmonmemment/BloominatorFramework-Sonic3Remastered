@@ -1,42 +1,21 @@
+# ======================== #
+# Imports                  #
+# ======================== #
 import importlib
-import sys
-from types import ModuleType as _M
-
-from Subsystems.SubsystemAbstractor import GetModulePathFromCurrentSubsystemType, GetCurrentSubsystem
+from Subsystems.SubsystemAbstractor import GetModulePathFromCurrentSubsystemType
 
 # ======================== #
-# Static analysis stubs    #
+# Helper boy               #
 # ======================== #
-Running = False
-# noinspection PyUnusedLocal
-def ProcessEvent(Event): pass
-def ProcessEvents(): pass
-FrequencyTarget = None
-CurrentTicks    = None
-PreviousTicks   = None
-def SetupCap(): pass
-def FrameTickOver(): pass
-def UpdateTicks(): pass
+_MODULE = None
+def _GET_CLASS(ClassName):
+    global _MODULE
+    if not _MODULE: # probably haven't already cached the module so actually import it
+        _MODULE = importlib.import_module(GetModulePathFromCurrentSubsystemType("Events"))
+    return getattr(_MODULE, ClassName)
 
-# Now at runtime, all calls will be passed to this... proxy
-# Cheap but hey it works
-class anus(_M):
-    _MODULE = None
-    _SUBSYS = None
-
-    def _GET_SUBSYS(self):
-        _NEW_SUBSYS = GetCurrentSubsystem("Events")
-        if _NEW_SUBSYS != self._SUBSYS: # probably haven't already cached the module so actually import it
-            _MODULE_PATH = GetModulePathFromCurrentSubsystemType("Events")
-            self._MODULE = importlib.import_module(_MODULE_PATH)
-            self._SUBSYS = _NEW_SUBSYS
-        return self._MODULE
-
-    def __getattr__(self, name): return getattr(self._GET_SUBSYS(), name) # FUCK YOU PYCHARM
-    def __setattr__(self, name, value):
-        if name in ("_MODULE", "_SUBSYS"):
-            super().__setattr__(name, value)
-        else:
-            setattr(self._GET_SUBSYS(), name, value)
-
-sys.modules[__name__] = anus(__name__)
+# ======================== #
+# Stubs                    #
+# ======================== #
+EventManager = _GET_CLASS("EventManager")
+FPSCap       = _GET_CLASS("FPSCap")
